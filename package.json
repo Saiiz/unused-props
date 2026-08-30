@@ -1,0 +1,50 @@
+{
+  "name": "unused-props",
+  "version": "0.1.0",
+  "description": "Detects props declared but never used in React and Vue components, using real type analysis instead of AST pattern-matching.",
+  "type": "module",
+  "bin": {
+    "unused-props": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint . --ext .ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "vue",
+    "typescript",
+    "lint",
+    "props",
+    "unused-props",
+    "static-analysis"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@vue/compiler-sfc": "^3.4.0",
+    "commander": "^12.0.0",
+    "fast-glob": "^3.3.0",
+    "ts-morph": "^23.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.4.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist"
+  ]
+}
